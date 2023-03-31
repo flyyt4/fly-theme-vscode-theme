@@ -1,0 +1,61 @@
+{
+  "name": "fly-theme",
+  "displayName": "Fly theme",
+  "description": "Un tema de color inspirado en Synthwave para satisfacer tus sueños de neón",
+  "version": "0.0.1",
+  "author": "flyyt4",
+  "publisher": "flyyt4",
+  "icon": "icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flyyt4/fly-theme-vscode-theme"
+  },
+  "engines": {
+    "vscode": "^1.33.0"
+  },
+  "keywords": [
+    "retro",
+    "80s"
+  ],
+  "categories": [
+    "Themes"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "themes": [
+      {
+        "label": "fly theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/fly-color-theme.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "flytheme.enableNeon",
+        "title": "Fly theme: activar el neon"
+      },
+      {
+        "command": "flytheme.disableNeon",
+        "title": "Fly theme: desactivar el neon"
+      }
+    ],
+    "configuration": {
+      "title": "Fly theme",
+      "properties": {
+        "flytheme.brightness": {
+          "type": "number",
+          "default": 0.45,
+          "description": "Establezca el valor de brillo para el efecto de brillo. 0.0 es completamente transparente y 1.0 es completamente brillante"
+        },
+        "flytheme.disableGlow": {
+          "type": "boolean",
+          "default": false,
+          "description": "Deshabilite el efecto de brillo, pero muestre las actualizaciones de cromo del editor Synthwave '84"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "semver": "^7.1.1"
+  }
+}
